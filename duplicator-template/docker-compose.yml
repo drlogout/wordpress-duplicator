@@ -1,5 +1,9 @@
 version: '2'
 
+volumes:
+    dbvolume:
+        external: true
+
 services:
   wordpress:
     image: drlogout/wordpress-duplicator:v1.0.0
@@ -17,5 +21,5 @@ services:
       MYSQL_PASSWORD: wordpress
       MYSQL_ROOT_PASSWORD: root
     volumes:
-      - "./mysql:/var/lib/mysql"
+      - "dbvolume:/var/lib/mysql"
     restart: always
