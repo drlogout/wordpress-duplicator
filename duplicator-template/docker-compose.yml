@@ -1,7 +1,8 @@
 version: '2'
 
 volumes:
-        dbvolume:
+    dbvolume:
+        external: true
 
 services:
   wordpress:
