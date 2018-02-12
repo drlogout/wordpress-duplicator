@@ -18,6 +18,12 @@ $ mv duplicator-template wpclone
 
 Copy your `*.archive.zip` file into `wpclone/wordpress`.
 
+Create an external volume for mysql data.
+
+```bash
+docker volume create dbvolume
+```
+
 If you plan to run this in production set secure passwords in `wpclone/docker-compose.yml`!
 
 Then start up the containers.
